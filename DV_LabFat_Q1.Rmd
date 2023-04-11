@@ -12,6 +12,19 @@ count(data$gear)
 plot(x = )
 ```
 
+```{r}
+### Question - Use the ‘count’ function to count the gear type and draw a bar graph that shows the number of gear type.
+
+library(plyr)
+carbFreq <- as.data.frame(count(mtcars, c("carb")))
+
+pie(carbFreq$freq,carbFreq$carb
+    , radius = 1
+    , main = "Frequency of Carburetors"
+    , col = c("maroon", "red", "orange", "yellow", "green", "grey")
+    )
+```
+
 
 ```{r}
 ### Question - Draw a pie chart showing the proportion of cars from that have different carb values. ‘Printing’ the dataset, and creating a table isolating the ‘carb’ variable.
