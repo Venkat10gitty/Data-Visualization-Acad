@@ -6,6 +6,49 @@ output: html_document
 ---
 
 ```{r}
+### Question 1 - Find the mean, standard deviation, and standard error of tree circumference.
+library(plotrix)
+data = Orange
+mean(data$circumference)
+sd(data$circumference)
+std.error(data$circumference)
+```
+
+
+```{r}
+### Question 2 - Plot the Trunk circumferences Vs age (Grouping them based on tree attributes)
+plot(data$circumference, data$age)
+abline(model,col="red")
+```
+
+
+```{r}
+### Question 3 - Make a linear model which describes circumference (the response) as a function of age (the predictor).
+model=lm(data$circumference ~ data$age)
+model
+```
+
+
+```{r}
+### Question 4 - Provide a better plot to analyze the t-test results for statistical significance.
+# Load the Orange dataset
+data(Orange)
+
+# Perform a t-test on two groups
+Orange$circumference <- as.numeric(cut(Orange$circumference, 2, labels = c("small", "large")))
+t.test(Orange$age ~ Orange$circumference)
+
+# Create a box plot to visualize the data
+library(ggplot2)
+ggplot(Orange, aes(x = cut(circumference, 2, labels = c("small", "large")), y = age)) +
+  geom_boxplot()
 
 ```
+
+
+
+
+
+
+
 
