@@ -13,6 +13,20 @@ plot(x = )
 ```
 
 
+```{r}
+### Question - Draw a pie chart showing the proportion of cars from that have different carb values. ‘Printing’ the dataset, and creating a table isolating the ‘carb’ variable.
+
+mtcarscarb = table(mtcars$carb)
+mtcarscarb
+#Create percent label values
+percentlabels<- round(100*mtcarscarb/sum(mtcarscarb), 1)
+#Create labels for each pie in the chart
+pielabels<- paste(percentlabels, "%", sep="")
+#R code to create the Pie Chart
+pie(mtcarscarb,col = rainbow(length(mtcarscarb)), labels = pielabels , main = 'Pie Chart of Proportion of Cars with Different Number of Carburetors', cex = 0.8)
+ #Legend for the pie chart
+legend("topright", c("Carb-1","Carb-2","Carb-3","Carb-4","Carb-6","Carb-8"), cex=0.6, fill=  rainbow(length(mtcarscarb)))
+```
 
 
 
