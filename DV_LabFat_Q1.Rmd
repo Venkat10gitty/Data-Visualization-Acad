@@ -14,15 +14,9 @@ plot(x = )
 
 ```{r}
 ### Question - Use the ‘count’ function to count the gear type and draw a bar graph that shows the number of gear type.
+data = mtcars
 
-library(plyr)
-carbFreq <- as.data.frame(count(mtcars, c("carb")))
-
-pie(carbFreq$freq,carbFreq$carb
-    , radius = 1
-    , main = "Frequency of Carburetors"
-    , col = c("maroon", "red", "orange", "yellow", "green", "grey")
-    )
+barplot(table(mtcars$gear), main = "Frequency of Carburetors", col = c("maroon", "red", "orange", "yellow", "green", "grey"))
 ```
 
 
