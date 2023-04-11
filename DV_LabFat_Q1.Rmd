@@ -6,6 +6,20 @@ output: html_document
 ---
 
 ```{r}
-
+data = mtcars
+data$gear
+count(data$gear)
+plot(x = )
 ```
+
+
+
+
+
+
+
+
+
+
+
 
