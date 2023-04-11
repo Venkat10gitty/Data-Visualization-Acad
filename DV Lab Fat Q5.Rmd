@@ -18,7 +18,6 @@ std.error(data$circumference)
 ```{r}
 ### Question 2 - Plot the Trunk circumferences Vs age (Grouping them based on tree attributes)
 plot(data$circumference, data$age)
-abline(model,col="red")
 ```
 
 
